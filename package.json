@@ -1,0 +1,23 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "online resume",
+  "main": "index.html",
+  "scripts": {
+    "start" : "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vertigo-Nex/test.git"
+  },
+  "author": "Aakash Das Sarania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vertigo-Nex/test/issues"
+  },
+  "homepage": "https://github.com/Vertigo-Nex/test#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
