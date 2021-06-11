@@ -4,7 +4,7 @@
   "description": "online resume",
   "main": "index.html",
   "scripts": {
-    "start" : "lite-server",
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Vertigo-Nex/test#readme",
   "dependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "material-design-icons": "^3.0.1"
   }
 }
