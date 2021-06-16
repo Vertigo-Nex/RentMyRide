@@ -1,12 +1,123 @@
 #main-nav{
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    box-shadow: 0 4px 4px -4px rgba(0,0,0,.2);
+	opacity: 100%;
+	-webkit-backdrop-filter: blur(2em);
+	backdrop-filter: blur(2em);
+	
 }
 
 .navbar-brand{
 	font-family: 'Varela', sans-serif;
-	font-size: ;
+	
 }
 
 .navbar-nav{
 	font-family: 'Montserrat', sans-serif;
 }
+
+body{
+	
+	padding: 114px 0px 0px 0px;
+	z-index: 0;
+	
+}
+
+.row-content{
+	margin: 0px auto;
+    padding: 50px 20px 50px 20px;
+    min-height: 300px;
+	
+}
+
+
+.row-header{
+    margin :0px auto;
+    padding: 0px auto;
+}
+
+#row1{
+	background: #f7b05b;
+	transition: 1s;
+	transform-origin: left;
+	transform: scaleX(1);	
+}
+
+.row{
+
+
+}
+
+#row2{
+	background: #cacfd6;
+	transition: 1s;
+	transform-origin: bottom;
+	transform: scaleX(1);
+}
+
+#row3{
+	background: #f7ce5b;
+	transition: 1s;
+	transform-origin: bottom;
+	transform: scaleX(1);
+}
+
+#row4{
+	background: #d6e5e3;
+	transition: 1s;
+	transform-origin: bottom;
+	transform: scaleX(1);
+}
+
+.card{
+	background: cornflowerblue;
+	max-height: 30em;
+}
+
+@media(max-width: 900px){
+	section h2{
+		font-size: 40px;
+	}
+	
+	section .card{
+		flex-direction: column;
+	}
+}
+
+.reveal{
+	position: relative;
+	transform:translateY(150px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.reveal.active{
+	transform:translateY(0px);
+	opacity: 1;
+}
+
+.footer{
+    background-color: #000000;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+	color: #fff;
+
+}
+
+.bg-cover {
+	width: 100%;
+	height: 400px;
+	background: url("/desk.jpg") no-repeat bottom;
+	background-size: cover;
+	
+
+	
+  }
+  .search{
+	  padding-top: 180px;
+	  max-width: 70%;
+	  padding-left: 30%;
+	  height: inherit;
+	  color: #fff;
+	  
+
+  }
