@@ -42,10 +42,6 @@ body{
 	transform: scaleX(1);	
 }
 
-.row{
-
-
-}
 
 #row2{
 	background: #cacfd6;
@@ -118,6 +114,4 @@ body{
 	  padding-left: 30%;
 	  height: inherit;
 	  color: #fff;
-	  
-
   }
