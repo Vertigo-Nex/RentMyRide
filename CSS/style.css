@@ -17,7 +17,7 @@
 
 body{
 	
-	padding: 114px 0px 0px 0px;
+	padding: 75px 0px 0px 0px;
 	z-index: 0;
 	
 }
@@ -25,10 +25,15 @@ body{
 .row-content{
 	margin: 0px auto;
     padding: 50px 20px 50px 20px;
-    min-height: 300px;
+    min-height: 500px;
 	
 }
 
+.row-content-blank{
+	margin: 0px auto;
+    padding: 50px 20px 50px 20px;
+    min-height: 150px;
+}
 
 .row-header{
     margin :0px auto;
@@ -99,15 +104,27 @@ body{
 
 }
 
-.bg-cover {
+.bg-cover{
 	width: 100%;
-	height: 400px;
-	background: url("/deskX.jpg") no-repeat bottom;
+	height: 600px;
+	background: url("../deskX.jpg") no-repeat bottom;
 	background-size: cover;
-	
+}
 
-	
-  }
+.bg-car{
+	background: url("../Car1.jpg") no-repeat bottom;
+	background-size:contain;
+	width: 100%;
+}
+
+.bg-cover2{
+	width: 100%;
+	height: 600px;
+	background: url("../deskY.jpg") no-repeat bottom;
+	background-size: cover;
+
+}
+
   .search{
 	  padding-top: 180px;
 	  max-width: 80%;
@@ -127,4 +144,9 @@ body{
 
 #loginModalB .modal-content{
 	background-color: #9ad1d4;
+}
+
+a {
+    
+    text-decoration: none !important;
 }
