@@ -40,10 +40,11 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html"><span
                                 class="fa fa-home fa-lg"></span>
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="material-icons">&#xe88e;</span>
-                            About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>
-                            Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carList.html"><span
+                                class="material-icons">&#xe88e;</span>
+                            Car List</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>
+                            Contact</a></li>-->
                 </ul>
                 <!--
                     <span class="nav-item">
@@ -56,226 +57,8 @@
         </div>
     </nav>
 
-    <div class="modal fade" id="loginModal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a type="button" class="btn close d-flex align-items-center justify-content-center"
-                        data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fa fa-times-circle fa-lg"></span>
-                    </a>
-                </div>
-                <div class="modal-body p-4 p-md-5">
-                    <h1 class="text-center mb-4">Choose your role</h1>
-                    <div class="col align-self-center">
-                        <div class="row">
-                            <button type="button" class="btn btn-primary btn-lg col-4" id="employer">
-                                <span class="fa fa-building"></span>Employer
-                            </button>
-                            <button type="button" class="btn btn-primary btn-lg col-4 offset-4" id="employee">
-                                <span class="fa fa-briefcase"></span>Employee
-                            </button>
-                        </div>
 
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="loginModalA" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a type="button" class="btn d-flex align-items-center justify-content-center"
-                        data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fa fa-times-circle fa-lg"></span>
-                    </a>
-                </div>
-                <div class="modal-body p-4 p-md-5">
-                    <div class="fa d-flex align-items-center justify-content-center">
-                        <span class="fa fa-building fa-lg"></span>
-                    </div>
-                    <h3 class="text-center mb-4">Sign In</h3>
-                    <form action="#" class="login-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control rounded-left" placeholder="UserID">
-                        </div>
-                        <div class="form-group d-flex">
-                            <input type="password" class="form-control rounded-left" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit"
-                                class="form-control btn btn-primary rounded submit px-3">Login</button>
-                        </div>
-                        <div class="form-group d-md-flex">
-                            <div class="form-check w-50">
-                                <label class="custom-control fill-checkbox">
-                                    <input type="checkbox" class="fill-control-input">
-                                    <span class="fill-control-indicator"></span>
-                                    <span class="fill-control-description">Remember Me</span>
-                                </label>
-                            </div>
-                            <div class="w-50 text-md-right">
-                                <a href="#">Forgot Password</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p>Not a member? <a href="#">Create an account</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="loginModalB" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a type="button" class="btn d-flex align-items-center justify-content-center"
-                        data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fa fa-times-circle fa-lg"></span>
-                    </a>
-                </div>
-                <div class="modal-body p-4 p-md-5">
-                    <div class="fa d-flex align-items-center justify-content-center">
-                        <span class="fa fa-briefcase fa-lg"></span>
-                    </div>
-                    <h3 class="text-center mb-4">Sign In</h3>
-                    <form action="#" class="login-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control rounded-left" placeholder="Username">
-                        </div>
-                        <div class="form-group d-flex">
-                            <input type="password" class="form-control rounded-left" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit"
-                                class="form-control btn btn-primary rounded submit px-3">Login</button>
-                        </div>
-                        <div class="form-group d-md-flex">
-                            <div class="form-check w-50">
-                                <label class="custom-control fill-checkbox">
-                                    <input type="checkbox" class="fill-control-input">
-                                    <span class="fill-control-indicator"></span>
-                                    <span class="fill-control-description">Remember Me</span>
-                                </label>
-                            </div>
-                            <div class="w-50 text-md-right">
-                                <a href="#">Forgot Password</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p>Not a member? <a href="#">Create an account</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--
-    <div id="wait" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-bs-dismiss="modal">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
-                            <p> </p>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <p> </p>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>            
-                            <button type="button" class="close btn btn-secondary btn-sm ml-auto" data-bs-dismiss="modal">Cancel</button>
-                        </div>
-                        New User?<a href="#">Sign UP</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!--
-    <div class="offcanvas offcanvas-end w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
-        <div class="offcanvas-header">
-            <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body px-0">
-            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-truncate">
-                        <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
-                        <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-truncate">
-                        <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">Bootstrap</span>
-                    </a>
-                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-truncate">
-                        <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-truncate">
-                        <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-
-    <div class="row">
-        <div class="col min-vh-100 py-3">
-            
-            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-                <i class="fa fa-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-            </button>
-            
-        </div>
-    </div>
-    -->
 
     <div class="bg-cover2">
 
@@ -308,69 +91,191 @@
 
 
 
+        <div class="row-content-blank"></div>
 
 
+        <div class="row row-content-car" id="row1">
 
-        <div class="row row-content" id="row1">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Maruti Suzuki DZire</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-dzire">
 
-            <div class="row-header">
-
-                <h2>What is Lorem Ipsum?</h2>
-
+                </div>
             </div>
-
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
 
         </div>
 
-        <div class="row-content"></div>
+        <div class="row-content-blank"></div>
 
-        <div class="row row-content reveal" id="row2">
+        <div class="row row-content-car reveal" id="row2">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Maruti Suzuki Baleno</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-baleno">
 
-            <div class="row-header">
-
-                <h2>Why do we use it?</h2>
-
+                </div>
             </div>
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
+
         </div>
 
-        <div class="row-content"></div>
+        <div class="row-content-blank"></div>
 
-        <div class="row row-content reveal" id="row3">
+        <div class="row row-content-car reveal" id="row3">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Toyota Innova</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-innova">
 
-            <div class="row-header">
-
-                <h2>Where does it come from?</h2>
-
+                </div>
             </div>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-            Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-            Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-            theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-            sit amet..", comes from a line in section 1.10.32.
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
 
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-            exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </div>
+        <div class="row-content-blank"></div>
+
+        <div class="row row-content-car reveal" id="row3">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Mahindra Xylo</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-xylo">
+
+                </div>
+            </div>
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
+
         </div>
 
-        <div class="row-content"></div>
+        <div class="row-content-blank"></div>
 
-        <div class="row row-content reveal justify-content-evenly" id="row4">
+        <div class="row row-content-car reveal" id="row3">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Maruti Suzuki Alto 800</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-alto">
+
+                </div>
+            </div>
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-content-blank"></div>
+
+        <div class="row row-content-car reveal" id="row3">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Maruti Suzuki Ertiga</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-ertiga">
+
+                </div>
+            </div>
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-content-blank"></div>
+
+        <div class="row row-content-car reveal" id="row3">
+            <div class="card text-white bg-dark col-md-3 col-sm-4">
+                <div class="card-header">
+                    <h2>Maruti Suzuki WagonR</h2>
+                </div>
+                <div class="card-body d-none d-sm-block bg-wagonr">
+
+                </div>
+            </div>
+            <div class="card text-white bg-dark col-md-9 col-sm-8">
+                <div class="card-header">
+                    <h2>Vehicle info:</h2>
+                </div>
+                <div class="card-body">
+                    Total kms driven: <br>
+                    Mileage: <br>
+                    Model no.: <br>
+                    Extra Features: <br>
+                    <button id="book" type="button" class="btn btn-success">Book</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row-content-blank"></div>
+
+        <!--<div class="row row-content reveal justify-content-evenly" id="row4">
 
             <div class="card text-white bg-dark col-md-2 col-sm-4">
                 <div class="card-header">
@@ -397,7 +302,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
     </div>
     <footer class="footer">
@@ -456,22 +361,6 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#loginModal').on('shown.bs.modal', function () {
-                $('#login').trigger('focus')
-            });
-
-            $('#login').click(function () {
-                $('#loginModal').modal('show');
-            });
-            $('#employer').click(function () {
-                $('#loginModalA').modal('show');
-            });
-            $('#employee').click(function () {
-                $('#loginModalB').modal('show');
-            });
-        })
-
 
         window.addEventListener('scroll', reveal);
 
@@ -492,6 +381,17 @@
             }
         }
 
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var bookButtons = document.querySelectorAll('.btn');
+
+            bookButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    alert('Your ride has been booked');
+                });
+            });
+        });
     </script>
     <script src="https://use.fontawesome.com/00adf05b57.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

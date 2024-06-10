@@ -35,6 +35,12 @@ body{
     min-height: 150px;
 }
 
+.row-content-car{
+	margin: 0px auto;
+    padding: 0px auto;
+    min-height: 250px;
+}
+
 .row-header{
     margin :0px auto;
     padding: 0px auto;
@@ -113,8 +119,64 @@ body{
 
 .bg-car{
 	background: url("../Car1.jpg") no-repeat bottom;
-	background-size:contain;
+	background-size:cover;
 	width: 100%;
+}
+
+.bg-dzire{
+	background: url("../Cars/dzire.avif") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-baleno{
+	background: url("../Cars/baleno.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-innova{
+	background: url("../Cars/innova.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-xylo{
+	background: url("../Cars/xylo.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-alto{
+	background: url("../Cars/alto.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-ertiga{
+	background: url("../Cars/ertiga.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
+}
+
+.bg-wagonr{
+	background: url("../Cars/wagonr.webp") no-repeat bottom;
+	background-size:cover;
+	width: 100%;
+	
+
 }
 
 .bg-cover2{
