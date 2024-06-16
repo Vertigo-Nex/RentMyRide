@@ -22,7 +22,15 @@
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">-->
     <script id="search-js" defer="" src="https://api.mapbox.com/search-js/v1.0.0-beta.21/web.js">
     </script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css'
+        rel='stylesheet' />
+    <script
+        src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+
     <script>
+
         const script = document.getElementById('search-js');
         script.onload = function () {
             mapboxsearch.autofill({
@@ -74,22 +82,20 @@
 
         <div class="container">
             <div class="row-content-blank"></div>
-            <div class="row row-content align-items-center justify-content-center py-5 ">
+            <div class="row row-content align-items-center justify-content-center py-5">
                 <div class="col-sm-3">
                     <a href="#" style="text-decoration: none;">
                         <div class="card selection bg-light">
                             <div class="card-body text-center text-dark">
                                 <h2>Location</h2>
                                 <form>
+                                    <div id="search-js-container"></div>
                                     <input id="search-js" class="form-control" name="address" placeholder="Address"
                                         type="text" autocomplete="address-line1" />
-
-
                                 </form>
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-sm-3">
                     <a href="#" style="text-decoration: none;">
@@ -97,12 +103,12 @@
                             <div class="card-body text-center text-dark">
                                 <h2>Pick-up Date</h2>
                                 <form>
-                                    <input class="form-control" type="datetime-local" placeholder="Select DateTime">
+                                    <input id="pickup-datetime" class="form-control" type="datetime-local"
+                                        placeholder="Select DateTime">
                                 </form>
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-sm-3">
                     <a href="#" style="text-decoration: none;">
@@ -110,22 +116,21 @@
                             <div class="card-body text-center text-dark">
                                 <h2>Return Date</h2>
                                 <form>
-                                    <input class="form-control" type="datetime-local" placeholder="Select DateTime">
+                                    <input id="return-datetime" class="form-control" type="datetime-local"
+                                        placeholder="Select DateTime">
                                 </form>
                             </div>
                         </div>
                     </a>
-
                 </div>
                 <div class="col-sm-3">
-                    <a href="carList.html" style="text-decoration: none;">
+                    <a href="carList.html" style="text-decoration: none;" id="bookCarLink">
                         <div class="card selection bg-danger">
                             <div class="card-body text-center text-white">
                                 <h2>Book a car</h2>
                             </div>
                         </div>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -296,21 +301,7 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#loginModal').on('shown.bs.modal', function () {
-                $('#login').trigger('focus')
-            });
 
-            $('#login').click(function () {
-                $('#loginModal').modal('show');
-            });
-            $('#employer').click(function () {
-                $('#loginModalA').modal('show');
-            });
-            $('#employee').click(function () {
-                $('#loginModalB').modal('show');
-            });
-        })
 
 
         window.addEventListener('scroll', reveal);
@@ -332,6 +323,23 @@
             }
         }
 
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            // Store data in localStorage when the "Book a car" link is clicked
+            document.getElementById('bookCarLink').addEventListener('click', function (event) {
+                const location = document.getElementById('search-js').value;
+                const pickupDateTime = document.getElementById('pickup-datetime').value;
+                const returnDateTime = document.getElementById('return-datetime').value;
+
+                localStorage.setItem('location', location);
+                localStorage.setItem('pickupDateTime', pickupDateTime);
+                localStorage.setItem('returnDateTime', returnDateTime);
+            });
+        });
     </script>
     <script src="https://use.fontawesome.com/00adf05b57.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

@@ -89,7 +89,31 @@
 
     <div class="container col-12">
 
+        <div class="modal fade" id="carModal" tabindex="-1" aria-labelledby="carModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carModalLabel">
+                            <div id="dataDisplay">
+                                <strong>Booking Details :</strong>
+                                <br><br>
+                                <!--<p><strong>Location Info:</strong> <span id="locationDisplay"></span></p>-->
+                                <p>Pick-up Date and Time: <span id="pickupDisplay"></span></p>
+                                <p>Return Date and Time: <span id="returnDisplay"></span></p>
+                            </div>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row-content-blank"></div>
 
@@ -113,7 +137,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="1">Book</button>
                 </div>
             </div>
 
@@ -139,7 +164,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="2">Book</button>
                 </div>
             </div>
 
@@ -165,7 +191,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="3">Book</button>
                 </div>
             </div>
 
@@ -190,7 +217,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="4">Book</button>
                 </div>
             </div>
 
@@ -216,7 +244,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="5">Book</button>
                 </div>
             </div>
 
@@ -242,7 +271,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="6">Book</button>
                 </div>
             </div>
 
@@ -268,7 +298,8 @@
                     Mileage: <br>
                     Model no.: <br>
                     Extra Features: <br>
-                    <button id="book" type="button" class="btn btn-success">Book</button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#carModal"
+                        data-car-id="7">Book</button>
                 </div>
             </div>
 
@@ -382,7 +413,7 @@
         }
 
     </script>
-    <script>
+    <!--<script>
         document.addEventListener('DOMContentLoaded', function () {
             var bookButtons = document.querySelectorAll('.btn');
 
@@ -392,8 +423,120 @@
                 });
             });
         });
-    </script>
+    </script>-->
     <script src="https://use.fontawesome.com/00adf05b57.js"></script>
+    <script>
+        // Define some sample car data
+        const carData = [
+            {
+                id: 1,
+                name: 'Maruti Suzuki DZire',
+                kms: '20,000',
+                mileage: '22 km/l',
+                model: '2021',
+                features: ['Power Steering', 'AC', 'Power Windows']
+            },
+            {
+                id: 2,
+                name: 'Maruti Suzuki Baleno',
+                kms: '15,000',
+                mileage: '24 km/l',
+                model: '2020',
+                features: ['Power Steering', 'AC', 'Touchscreen Infotainment']
+            },
+            {
+                id: 3,
+                name: 'Toyota Innova',
+                kms: '35,000',
+                mileage: '18 km/l',
+                model: '2019',
+                features: ['Power Steering', 'AC', 'Cruise Control', 'Leather Seats']
+            },
+            {
+                id: 4,
+                name: 'Mahindra Xylo',
+                kms: '40,000',
+                mileage: '16 km/l',
+                model: '2018',
+                features: ['Power Steering', 'AC', 'Rear AC Vents', 'Touchscreen Infotainment']
+            },
+            {
+                id: 5,
+                name: 'Maruti Suzuki Alto 800',
+                kms: '12,000',
+                mileage: '26 km/l',
+                model: '2022',
+                features: ['Power Steering', 'AC', 'Bluetooth Connectivity']
+            },
+            {
+                id: 6,
+                name: 'Maruti Suzuki Ertiga',
+                kms: '28,000',
+                mileage: '20 km/l',
+                model: '2021',
+                features: ['Power Steering', 'AC', 'Touchscreen Infotainment', 'Rear AC Vents']
+            },
+            {
+                id: 7,
+                name: 'Maruti Suzuki WagonR',
+                kms: '18,000',
+                mileage: '24 km/l',
+                model: '2020',
+                features: ['Power Steering', 'AC', 'Bluetooth Connectivity']
+            }
+        ];
+
+        // Implement the fetchCarDetails function
+        function fetchCarDetails(carId) {
+            return new Promise((resolve, reject) => {
+                const carDetails = carData.find(car => car.id === parseInt(carId));
+                if (carDetails) {
+                    resolve(carDetails);
+                } else {
+                    reject(new Error(`Car details not found for ID ${carId}`));
+                }
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            const carModal = document.getElementById('carModal');
+
+            carModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const carId = button.getAttribute('data-car-id');
+
+                fetchCarDetails(carId)
+                    .then(carDetails => {
+                        const modalBody = carModal.querySelector('.modal-body');
+                        modalBody.innerHTML = `
+          <h3>${carDetails.name}</h3>
+          <p><strong>Total kms driven:</strong> ${carDetails.kms}</p>
+          <p><strong>Mileage:</strong> ${carDetails.mileage}</p>
+          <p><strong>Model:</strong> ${carDetails.model}</p>
+          <p><strong>Extra Features:</strong> ${carDetails.features.join(', ')}</p>
+          
+          
+          
+        `;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching car details:', error);
+                    });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const location = localStorage.getItem('location');
+            const pickupDateTime = localStorage.getItem('pickupDateTime');
+            const returnDateTime = localStorage.getItem('returnDateTime');
+
+            document.getElementById('locationDisplay').innerText = location;
+            document.getElementById('pickupDisplay').innerText = pickupDateTime;
+            document.getElementById('returnDisplay').innerText = returnDateTime;
+        });
+    </script>
     <!--<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         const flatpickr = require("flatpickr");

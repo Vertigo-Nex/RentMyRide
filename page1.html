@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Data</title>
+</head>
+
+<body>
+    <h1>Store Data</h1>
+    <form id="dataForm">
+        <label for="location">Location Info:</label>
+        <input type="text" id="location" name="location"><br><br>
+
+        <label for="datetime">Date and Time:</label>
+        <input type="datetime-local" id="datetime" name="datetime"><br><br>
+
+        <button type="submit">Save Data</button>
+    </form>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const location = document.getElementById('location').value;
+            const datetime = document.getElementById('datetime').value;
+
+            localStorage.setItem('location', location);
+            localStorage.setItem('datetime', datetime);
+
+            alert('Data saved!');
+        });
+    </script>
+</body>
+
+</html>
