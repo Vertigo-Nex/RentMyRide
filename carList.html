@@ -109,7 +109,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Book Now</button>
+                        <button id="final" type="button" class="btn btn-primary">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -413,17 +413,18 @@
         }
 
     </script>
-    <!--<script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var bookButtons = document.querySelectorAll('.btn');
+            var bookButton = document.getElementById('final');
 
-            bookButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
+            if (bookButton) {
+                bookButton.addEventListener('click', function () {
                     alert('Your ride has been booked');
                 });
-            });
+            }
         });
-    </script>-->
+    </script>
+
     <script src="https://use.fontawesome.com/00adf05b57.js"></script>
     <script>
         // Define some sample car data

@@ -341,6 +341,31 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var bookCarLink = document.getElementById('bookCarLink');
+
+            function handleBookCarClick(event) {
+                // Prevent default behavior (e.g., following the link)
+                event.preventDefault();
+
+                // Get the values of pickup and return dates
+                const pickupDateTime = document.getElementById('pickup-datetime').value;
+                const returnDateTime = document.getElementById('return-datetime').value;
+
+                // Check if return date is before pickup date
+                if (returnDateTime < pickupDateTime) {
+                    alert('Please enter valid dates. Return date cannot be before pickup date.');
+                } else {
+                    // Proceed to carList.html
+                    window.location.href = bookCarLink.href; // Navigate to carList.html
+                }
+            }
+
+            // Add event listener to "Book a car" link
+            bookCarLink.addEventListener('click', handleBookCarClick);
+        });
+    </script
     <script src="https://use.fontawesome.com/00adf05b57.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
